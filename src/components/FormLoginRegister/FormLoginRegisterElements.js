@@ -10,6 +10,9 @@ export const Container = styled.div`
     align-items: center;
     //outline:2px solid black;
     gap: 2.3em;
+    @media screen and (max-width: 960px) {
+        //outline:          2px solid blue;
+      }
 `;
 
 export const H2 = styled.h2`

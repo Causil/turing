@@ -19,7 +19,7 @@ return(
     <Container>
         {dataText.title.map( (item) =>  <H2> {item} </H2> )}
         <WraperInputs>
-            {dataText.input.map( (item,i) => 
+            {dataText.input.map( (item,i) =>
             <WraperInput>
                 <Img   src ={dataText.input[i].logo}></Img>
                 <Input type={dataText.input[i].type} placeholder={dataText.input[i].placeholder}/>
@@ -37,7 +37,10 @@ return(
                 <Label fontWeight='700'> {dataText.text[2].text} </Label>
             </WraperLabel>
         </WraperLabels>
-        : <> Hola soy el registro</>
+        : 
+        <> 
+            Hola soy el registro
+        </>
         }
     </Container>
 )

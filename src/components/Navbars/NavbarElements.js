@@ -24,6 +24,7 @@ z-index: 999;
     width:    100%;
     min-width: 320px;
     padding:  0 0% 0 0;
+    //outline:2px solid blue;
 }
 `
 
@@ -39,7 +40,7 @@ export const NavbarContainer = styled.div`
     @media screen and (max-width: 960px) {
         width:           100%;
         display:         flex;
-        justify-content: space-between;
+        justify-content: center;
         padding:         0 2% 0 0;
     }
 `
@@ -56,6 +57,7 @@ export const NavLogo = styled.a`
     @media screen and (max-width: 960px) {
         min-width: 110px;
         width:     120px;
+
     }
 `;
 
