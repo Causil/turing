@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import Wraper from './components/Wraper/Wraper';
+import { Routes, Route } from 'react-router-dom';
+import Login from './sections/Login/Login';
+import Register from './sections/Register/Register';
+
 
 function App() {
+  const [navbutton,setNavbutton] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Wraper navbutton={navbutton} >
+    <Routes>
+      <Route index element = { <Login  setNavbutton={setNavbutton} />    }/>
+      <Route path="register" element = { <Register  setNavbutton={setNavbutton} /> }/>
+    </Routes>
+  </Wraper>
   );
 }
 
