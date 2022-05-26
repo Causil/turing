@@ -7,7 +7,7 @@ const Register = () => {
 return (
  <Container>
     <WraperForm>
-      <FormLoginRegister textLogin={textLogin} loginBool={loginBool} />
+      <FormLoginRegister dataText={textLogin} loginBool={loginBool} />
     </WraperForm>
  </Container>
 )

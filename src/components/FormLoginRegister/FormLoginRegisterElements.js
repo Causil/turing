@@ -6,7 +6,7 @@ export const Container = styled.div`
     height:100%;
     display:flex;
     flex-direction:column;
-    justify-content: center;
+    //justify-content: center;
     align-items: center;
     //outline:2px solid black;
     gap: 2.3em;
@@ -30,7 +30,7 @@ export const H2 = styled.h2`
 
 export const WraperInputs  = styled.div`
     width:100%;
-    height:30%;
+    height:40%;
     display:flex;
     flex-direction: column;
     //outline:2px solid black;
@@ -40,6 +40,8 @@ export const WraperInputs  = styled.div`
 export const WraperInput = styled.div`
     width:    100%;
     height:   40%;
+    min-height: 2em;
+    max-height: 3em;
     padding:  0 0 0 2%;
     display:flex;
     justify-content: center;
@@ -63,6 +65,7 @@ export const Img = styled.img`
 export const Input = styled.input`
     width:    90%;
     height:   95%;
+    
     border:   none;
     outline:  none;
     color:    #808093;
@@ -79,6 +82,8 @@ export const Input = styled.input`
 export const Button = styled.button`
     width:         90%;
     height:        10%;
+    max-height:    3em;
+    margin:   -2% 0 0 0;
     background:    linear-gradient(180deg, #4A05ED 0%, #4000D6 100%);
     border-radius: 16px;
     border:        none;
@@ -97,7 +102,7 @@ export const WraperLabels = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:center;
-    margin:   -5% 0 0 0;
+    margin:   -2% 0 0 0;
     gap:1em;
     //outline:2px solid blue;
 `;

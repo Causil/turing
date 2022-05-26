@@ -38,9 +38,11 @@ return(
             </WraperLabel>
         </WraperLabels>
         : 
-        <> 
-            Hola soy el registro
-        </>
+        <WraperLabels >
+            <WraperLabel>
+                <Label fontWeight='400'> {dataText.text[0].text} <Tolink to={'/'} fontWeight='700'> {dataText.text[1].text} </Tolink> </Label>
+            </WraperLabel>
+        </WraperLabels>
         }
     </Container>
 )
