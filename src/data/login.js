@@ -1,8 +1,8 @@
 const login = { 
 title: ['Inicia sesión'],
 input: [
-        {placeholder:'Nombre de usuario',type:'text',logo:'/image/logoUser.svg'},
-        {placeholder:'Contraseña',type:'text',logo:'/image/logoPassword.svg'}
+        {placeholder:'Correo electronico',type:'email',logo:'/image/logoUser.svg'},
+        {placeholder:'Contraseña',type:'password',logo:'/image/logoPassword.svg'}
        ],   
 button:[{text:'Iniciar sesión',type:'submit'}],
 text:  [
