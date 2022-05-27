@@ -3,28 +3,28 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 
 export const Nav = styled.nav`
-transition: all ease 0.3s;
+transition:                             all ease 0.3s;
 box-shadow: ${({ navbarColor, bg }) =>
   navbarColor || bg ? '0px 0px 12px rgba(0, 0, 0, 0.25)' : ''};
 background: ${({ mobile, navbarColor, bg }) =>
   mobile || navbarColor || bg ? 'white' : 'transparent'};
-font-family: 'Roboto' sans-serif;
-font-weight: 300;
-width:  100%;
-height: 15vh;
-display: flex;
+font-family:     'Roboto' sans-serif;
+font-weight:     300;
+width:           100%;
+height:          15vh;
+display:         flex;
 justify-content: center;
-align-items: center;
-font-size: 16px;
-position: sticky;
-top: 0;
-z-index: 999;
-//outline: 2px solid blue;
+align-items:     center;
+font-size:       16px;
+position:        sticky;
+top:             0;
+z-index:         999;
+//outline:       2px solid blue;
 @media screen and (max-width: 960px) {
-    width:    100%;
+    width:     100%;
     min-width: 320px;
-    padding:  0 0% 0 0;
-    //outline:2px solid blue;
+    padding:   0 0% 0 0;
+    //outline: 2px solid blue;
 }
 `
 
@@ -83,7 +83,7 @@ export const Line = styled.div`
 `;
 
 export const NavLinksLogo = styled.p`
-text-decoration: none !important;
+text-decoration: none;
 display:   ${({mobile})=> mobile ? "none" :""};
 color: ${({ color })=> (color ? color: 'black')};
 font-family: Roboto;
@@ -95,7 +95,7 @@ width:       212px;
 `;
 
 export const NavMenu = styled.div`
-    list-style: none;
+    //list-style: none;
     display:    flex;
     max-width:  400px;
     margin:   0 8em 0 0;
@@ -104,12 +104,12 @@ export const NavMenu = styled.div`
     width:      ${({ width })=> (width ? width: 'auto')};
 `;
 
-export const NavItemBtn = styled.li`
+export const NavItemBtn = styled.div`
 //outline: 2px solid blue;
 display:         flex;
 justify-content: center;
 align-items:     center;
-width:      ${({ width })=> (width ? width: '10em')};
+width:      ${({ width })=> width ? width: '10em'};
 @media screen and (max-width: 960px) {
     width:           210px;
     height:          73px;
@@ -119,19 +119,15 @@ width:      ${({ width })=> (width ? width: '10em')};
 }
 `;
 export const NavLinks = styled(Link)`
-width:${({ width })=> (width ? width: '110px')};
-text-decoration: none !important;
-color: ${({ color })=> (color ? color: 'black')};
-font-style:  normal;
-font-weight: 700;
+color: ${({ color })=> color ? color: '#1B0E38'};
+text-decoration:none;
 font-size:   20px;
 line-height: 24px;
-text-align:  center;
-padding: ${( padding ) => (padding ? padding : '0 0 0 0')};
-margin:  ${( margin ) => (margin ? margin : '0 0 0 0')};
+font-style:  normal;
 &:hover{
     color: #4A05ED;
-}
+};
+font-weight: 700;
 @media screen and (max-width: 960px) {
     width:       100px;
     height:      30%;

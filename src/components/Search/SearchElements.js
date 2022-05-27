@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
     position:         relative;
     width:            80%;
-    height:           10%;
-    max-height:       4em;
+    height:           6vh;
+    max-height:       2em;
     display:          flex;
     justify-content:  center;
     align-items:      center;

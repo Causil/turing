@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import { HashLink as Link } from 'react-router-hash-link';
 
 export const Container = styled.div`
-    width:         100%;
-    height:        80%;
-    display:       flex;
+    width:           100%;
+    height:          75vh;
+    max-height:      32em;
+    display:         flex;
     justify-content: center;
-    align-items: center;
-    flex-direction:column;
-    outline:       2px solid blue;
+    align-items:     center;
+    flex-direction:  column;
+    gap:             2em;
+    //outline:       2px solid blue;
 `;
 
 export const WraperInfoFile = styled.div`
@@ -63,7 +66,7 @@ line-height: 14px;
 color: #4000D6;
 cursor: pointer;
 height: 100%;
-//outline:           2px solid blue;
+//outline: 2px solid blue;
 `;
 export const Img = styled.img`
 //outline:           2px solid blue;
@@ -73,16 +76,39 @@ cursor: pointer;
 export const WraperCarrusule = styled.div`
 width:   100%;
 height:  auto;
-outline: 2px solid blue;
+//outline: 2px solid blue;
 display: flex;
 `;
 export const  ContainerSerie = styled.div`
-outline: 2px solid blue;
-width: 50%;
+//outline:       2px solid blue;
+width:           90%;
+height:          95%;
+box-shadow:      0px 3px 15px 3px rgba(36, 22, 69, 0.1);
+border-radius:   12px;
+cursor:          default;
 `;
 
-export const  Video = styled.video`
-outline: 2px solid blue;
-width: 100%;
-height: 50%;
+export const  ImgSerie = styled.img`
+    //outline: 2px solid blue;
+    width: 100%;
+    height: 70%;
+    border-radius: 12px 12px 0px 0px;
+`;
+
+export const WraperTextChapter = styled.div`
+    //outline: 2px solid blue;
+    width: 100%;
+    height: 25%;
+    padding: 0 0 0 2em; 
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+//    align-items:center;
+`;
+
+export const ButtonLink = styled(Link)`
+    //background: black;
+    //outline: 2px solid blue;
+    text-decoration:none;
+    color: #4A05ED;
 `;

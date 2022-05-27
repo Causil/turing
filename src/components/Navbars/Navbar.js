@@ -6,7 +6,8 @@ import {
     Logo,
     NavMenu,
     NavItemBtn,
-    NavLinks
+    NavLinks,
+    NavLinksLogo 
 } from './NavbarElements';
 import navbars from '../../data/navbar';
 //import useWindowDimensions from '../../hooks/useWindowDimensions';
@@ -22,7 +23,7 @@ return (
                 { navbutton &&
                 Object.values(navbars).map( (item,i) => 
                     <NavItemBtn key={`navbar${i}`}>
-                        <NavLinks to = {item[1]} color='#1B0E38;'>
+                        <NavLinks to={`${item[1]}`}  >
                             {item[0]}
                         </NavLinks>
                     </NavItemBtn>

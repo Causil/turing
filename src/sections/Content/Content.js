@@ -13,7 +13,7 @@ const Content = ({setNavbutton}) => {
     useEffect( () => {
         let api = async (rut) => {
             const res = await axiosClient(rut);
-            const data = Array.from(res.data)
+            const data = res.data
             setAPIs(data)
             console.log(data)
         };
@@ -25,7 +25,7 @@ const Content = ({setNavbutton}) => {
         <Search text={content.engineSearch} />
         <Suspense fallback = {< RingLoader />}>
         {
-        aPIs != false && aPIs.map((serie,i) => {
+        aPIs !== false && aPIs.map((serie,i) => {
             if (serie.id != 4){
              return <Serie key={`Content${i}`} item={serie}  i={i} />   
             }

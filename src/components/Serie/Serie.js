@@ -8,9 +8,12 @@ import {Container,
         Img,
         WraperCarrusule,
         ContainerSerie,
-        Video
+        ImgSerie,
+        WraperTextChapter,
+        ButtonLink,
+        
     } from './SerieElements';
-
+import Carousel from 'styled-components-carousel';
 
 
 const Serie = ({item,i}) => {
@@ -27,16 +30,27 @@ return (
          <Img src='/image/download.svg' /> 
      </Download> 
  </WraperInfoFile> 
- <WraperCarrusule>  
-     {/* {item.chapters.map((serie,i) =>   */}
+ <WraperCarrusule>
+     <Carousel
+        center
+        infinite={true}
+        showArrows={true}
+        showIndicator={false}
+        slidesToShow={2}
+        centerPadding={1}
+        
+     >
+      {item.chapters.map((serie,i) =>   
      <ContainerSerie  >    
-        <Video src={`${item.chapters[0].chapter_video.url}`} controls>      
-        </Video>  
-        <H2> {item.chapters[0].chapter_name} </H2>  
-        <Paragraph> Seguir viendo </Paragraph>  
+        <ImgSerie src={serie.chapter_image.url} alt={item.chapters[2].chapter_image.name} />
+        <WraperTextChapter>
+            <H2> {serie.chapter_name} </H2>  
+            <ButtonLink to={serie.chapter_video.url}> Seguir viendo </ButtonLink>  
+        </WraperTextChapter>
       </ContainerSerie>  
-    {/* //   ) 
-    //   }  */}
+       ) 
+      }  
+    </Carousel>  
  </WraperCarrusule>  
 </Container>
 )
