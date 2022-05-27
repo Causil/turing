@@ -1,8 +1,8 @@
 const navbars = {
-    content:'Contenidos',
-    tests:  'Pruebas',
-    answer: 'Resultados',
-    bill:   'Cuenta'
+    content:['Contenidos','/content'],
+    tests:  ['Pruebas','/test'],
+    answer: ['Resultados','/answer'],
+    bill:   ['Cuenta','/bill']
 };
 
 export default navbars;

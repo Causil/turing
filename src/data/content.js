@@ -1,5 +1,5 @@
-export default content = {
-    engineSearch:         '¿Qué quieres aprender hoy?',
+const content = {
+    engineSearch:  ['¿Qué quieres aprender hoy?','/image/logoBuscar.svg'],
     animalSeries: [
             {
                 title:            'Animales domésticos',
@@ -37,3 +37,5 @@ export default content = {
             },
                     ]
     };
+
+    export default content;

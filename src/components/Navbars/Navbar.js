@@ -18,12 +18,12 @@ return (
             <NavLogo>
                 <Logo src='/image/logoNavbar.svg'/>
             </NavLogo>
-            <NavMenu>
+            <NavMenu >
                 { navbutton &&
-                Object.values(navbars).map( (item) => 
-                    <NavItemBtn>
-                        <NavLinks to = {'/'}>
-                            {item}
+                Object.values(navbars).map( (item,i) => 
+                    <NavItemBtn key={`navbar${i}`}>
+                        <NavLinks to = {item[1]} color='#1B0E38;'>
+                            {item[0]}
                         </NavLinks>
                     </NavItemBtn>
                 )
