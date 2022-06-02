@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import {Container,
         WraperInfoFile,
         WraperInfo,
@@ -16,8 +16,16 @@ import {Container,
     } from './SerieElements';
 import Carousel from 'styled-components-carousel';
 import VideoContext from '../../contexts/video/VideoContext';
-const Serie = ({item,i}) => {
+import useWindowDimensions from '../../hooks/useWindowDimensions'
 
+const Serie = ({item,i}) => {
+    const {mobile} = useWindowDimensions();
+    const [numSlide,setNumSlide] = React.useState(mobile ? 1 : 2);
+    React.useEffect( () => {
+        let numberSlide = mobile ? 1 : 2;
+        setNumSlide(numberSlide);
+    }
+    ,[mobile]);
     const {setUrl} = useContext(VideoContext);
     
     //console.log('iteracion' ,i,item.id,item.serie_name,item.serie_description,item.chapters[2].chapter_video.url)
@@ -39,12 +47,12 @@ return (
         infinite={true}
         showArrows={true}
         showIndicator={false}
-        slidesToShow={2}
+        slidesToShow={numSlide}
         centerPadding={1}
         
      >
       {item.chapters.map((serie,i) =>   
-     <ContainerSerie  >    
+     <ContainerSerie key={`serie${i}`} >    
         <ImgSerie src={serie.chapter_image.url} alt={item.chapters[2].chapter_image.name} />
         <WraperTextChapter>
             <H2> {serie.chapter_name} </H2>  

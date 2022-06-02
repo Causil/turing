@@ -12,11 +12,14 @@ const Video = ({setNavbutton}) =>  {
     return(
     <Container>
         <Suspense fallback = {< RingLoader />}>
-            <Vi
-                controls
-                autoplay
+            <Vi 
+                src={url}
+                loading
+                webkitallowfullscreen 
+                mozallowfullscreen 
+                allowfullscreen
             > 
-            <source src={url} />
+            
             Navegador No carga
             </Vi>
         </Suspense>
