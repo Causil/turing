@@ -11,6 +11,10 @@ export const Container = styled.div`
     flex-direction:  column;
     gap:             2em;
     //outline:       2px solid blue;
+    @media screen and (max-width: 960px) {
+        width:     100%;
+      //  outline:        2px solid blue;
+    }
 `;
 
 export const WraperInfoFile = styled.div`
@@ -20,6 +24,10 @@ display:        flex;
 align-items: center;
 justify-content: space-between;
 //outline:      2px solid blue;
+@media screen and (max-width: 960px) {
+    width:     95%;
+  //  outline:        2px solid blue;
+}
 `;
 
 export const WraperInfo = styled.div`
@@ -30,6 +38,10 @@ flex-direction: column;
 gap:            1em;
 align-items:    center;
 //outline:        2px solid blue;
+@media screen and (max-width: 960px) {
+    width:     90%;
+    //outline:        2px solid blue;
+}
 `;
 
 export const H2 = styled.h3`
@@ -57,6 +69,10 @@ width:             25%;
 //outline:           2px solid blue;
 text-decoration:   none;
 cursor:            default;
+@media screen and (max-width: 960px) {
+    width:          10%;
+    //outline:        2px solid blue;
+}
 `;
 export const TextFile = styled.label`
 font-style: normal;
