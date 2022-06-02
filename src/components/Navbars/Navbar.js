@@ -7,7 +7,7 @@ import {
     NavMenu,
     NavItemBtn,
     NavLinks,
-    NavLinksLogo 
+    NavLinksLogo,
 } from './NavbarElements';
 import navbars from '../../data/navbar';
 //import useWindowDimensions from '../../hooks/useWindowDimensions';
@@ -19,20 +19,22 @@ return (
             <NavLogo>
                 <Logo src='/image/logoNavbar.svg'/>
             </NavLogo>
-            <NavMenu >
-                { navbutton &&
-                Object.values(navbars).map( (item,i) => 
+            {navbutton && (
+            <NavMenu >   
+                {Object.values(navbars).map( (item,i) => 
                     <NavItemBtn key={`navbar${i}`}>
                         <NavLinks to={`${item[1]}`}  >
                             {item[0]}
                         </NavLinks>
                     </NavItemBtn>
-                )
+                                )
                 }
             </NavMenu>
+            )
+            }
         </NavbarContainer>
     </Nav>
 )
 };
 
-export default memo(Navbar);
+export default Navbar;

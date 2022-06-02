@@ -23,8 +23,11 @@ z-index:         999;
 @media screen and (max-width: 960px) {
     width:     100%;
     min-width: 320px;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
     padding:   0 0% 0 0;
-    //outline: 2px solid blue;
+    //outline: 4px solid blue;
 }
 `
 
@@ -40,8 +43,10 @@ export const NavbarContainer = styled.div`
     @media screen and (max-width: 960px) {
         width:           100%;
         display:         flex;
-        justify-content: center;
-        padding:         0 2% 0 0;
+        justify-content: center ;
+        align-items:     center ;
+        padding:         0 0% 0 0%;
+        //border: 2px solid black;
     }
 `
 
@@ -52,12 +57,15 @@ export const NavLogo = styled.a`
     justify-content: center;
     align-items:     center;
     max-width:       450px;
-    //outline: 2px solid blue;
+    //outline:       2px solid blue;
     text-decoration: none !important;
     @media screen and (max-width: 960px) {
         min-width: 110px;
         width:     120px;
-
+        display:         flex;
+        justify-content: center ;
+        align-items:     center ;
+        //outline: 2px solid black;
     }
 `;
 
@@ -71,6 +79,7 @@ export const Logo = styled.img`
     @media screen and (max-width: 960px) {
         width: 100%;
         height: 73px;
+        //outline: 2px solid black;
     }
 `;
 export const Line = styled.div`
@@ -102,6 +111,15 @@ export const NavMenu = styled.div`
     //outline: 2px solid blue;
     justify-content: ${({justifyContent})=>(justifyContent? justifyContent: "")};
     width:      ${({ width })=> (width ? width: 'auto')};
+    @media screen and (max-width: 960px) {
+        paddifn
+        // width:           100%;
+        // display:         flex;
+        // justify-content: center ;
+        // align-items:     center ;
+        // padding:         0 0% 0 0%;
+        // border: 2px solid black;
+    }
 `;
 
 export const NavItemBtn = styled.div`

@@ -4,7 +4,7 @@ import FormLoginRegister from '../../components/FormLoginRegister/FormLoginRegis
 import textLogin from '../../data/register';
 const Register = ({setNavbutton}) => {
    const loginBool = false;
-   setNavbutton(true)
+   setNavbutton(false)
 return (
  <Container>
     <WraperForm>
