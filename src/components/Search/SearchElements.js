@@ -9,6 +9,10 @@ export const Container = styled.div`
     justify-content:  center;
     align-items:      center;
     //outline:        2px solid blue;
+    @media screen and (max-width: 960px) {
+        width:     90%;
+      //  outline:        2px solid blue;
+    }
 `;
 
 
@@ -24,6 +28,9 @@ export const WraperSearch = styled.div`
     background:      #FFFFFF;
     box-shadow:      0px 1px 8px rgba(1, 82, 138, 0.1);
     border-radius:   8px;
+    @media screen and (max-width: 960px) {
+        width:     100%;
+    }
 `
 export const Input = styled.input`
     width:           90%;

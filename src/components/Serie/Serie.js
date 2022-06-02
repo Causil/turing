@@ -49,7 +49,6 @@ return (
         showIndicator={false}
         slidesToShow={numSlide}
         centerPadding={1}
-        
      >
       {item.chapters.map((serie,i) =>   
      <ContainerSerie key={`serie${i}`} >    
