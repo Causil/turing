@@ -10,11 +10,13 @@ import {
     NavLinksLogo,
 } from './NavbarElements';
 import navbars from '../../data/navbar';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 //import useWindowDimensions from '../../hooks/useWindowDimensions';
 const Navbar = ({navbutton}) => {
 //const {mobile} = useWindowDimensions();
+const {navbarColor} = useWindowDimensions();
 return (
-    <Nav> 
+    <Nav  navbarColor={navbarColor}> 
         <NavbarContainer>
             <NavLogo>
                 <Logo src='/image/logoNavbar.svg'/>
