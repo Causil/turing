@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import {Container,
         WraperInfoFile,
         WraperInfo,
@@ -14,10 +15,12 @@ import {Container,
         
     } from './SerieElements';
 import Carousel from 'styled-components-carousel';
-
-
+import VideoContext from '../../contexts/video/VideoContext';
 const Serie = ({item,i}) => {
-    console.log('iteracion' ,i,item.id,item.serie_name,item.serie_description,item.chapters[2].chapter_video.url)
+
+    const {setUrl} = useContext(VideoContext);
+    
+    //console.log('iteracion' ,i,item.id,item.serie_name,item.serie_description,item.chapters[2].chapter_video.url)
 return (
 <Container> 
  <WraperInfoFile> 
@@ -45,7 +48,12 @@ return (
         <ImgSerie src={serie.chapter_image.url} alt={item.chapters[2].chapter_image.name} />
         <WraperTextChapter>
             <H2> {serie.chapter_name} </H2>  
-            <ButtonLink to={serie.chapter_video.url}> Seguir viendo </ButtonLink>  
+            <ButtonLink
+                to={'/video'}
+                onClick={() => setUrl(serie.chapter_video.url) }
+            > Seguir viendo
+            
+            </ButtonLink>  
         </WraperTextChapter>
       </ContainerSerie>  
        ) 
@@ -57,3 +65,5 @@ return (
 
 }
 export default Serie 
+
+//serie.chapter_video.url

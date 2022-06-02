@@ -15,7 +15,7 @@ const Content = ({setNavbutton}) => {
             const res = await axiosClient(rut);
             const data = res.data
             setAPIs(data)
-            console.log(data)
+            //console.log(data)
         };
         api('/series');
     },[])

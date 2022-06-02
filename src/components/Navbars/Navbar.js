@@ -7,7 +7,7 @@ import {
     NavMenu,
     NavItemBtn,
     NavLinks,
-    NavLinksLogo,
+    //NavLinksLogo,
 } from './NavbarElements';
 import navbars from '../../data/navbar';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
@@ -39,4 +39,4 @@ return (
 )
 };
 
-export default Navbar;
+export default memo(Navbar);
