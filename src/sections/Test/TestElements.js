@@ -20,11 +20,18 @@ color:       #202026;
 padding: 0 0 0 2%;
 `;
 export const Paragraph = styled.p`
-font-style: normal;
+font-style:  normal;
 font-weight: 400;
-font-size: 20px;
+font-size:   20px;
 line-height: 14px;
-color: #000000;
+color:       #000000;
+@media screen and (max-width: 960px) {
+    width:                 100%;
+    max-width:             800px;
+    line-height: 25px;
+    //outline:               2px solid blue;
+    grid-template-columns: repeat(1, 1fr);
+}
 `;
 
 
@@ -34,5 +41,10 @@ export const ContainerTestCard = styled.div`
     height:                100vh;
     display:               grid;
     grid-template-columns: repeat(3, 1fr);
-    //grid-gap: 12px;
+    @media screen and (max-width: 960px) {
+        width:     100%;
+        max-width:             800px;
+        //outline:2px solid blue;
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
