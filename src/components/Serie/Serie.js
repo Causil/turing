@@ -21,6 +21,7 @@ import useWindowDimensions from '../../hooks/useWindowDimensions'
 const Serie = ({item,i}) => {
     const {mobile} = useWindowDimensions();
     const [numSlide,setNumSlide] = React.useState(mobile ? 1 : 2);
+    let data  = JSON.parse(localStorage.getItem("Data"))
     React.useEffect( () => {
         let numberSlide = mobile ? 1 : 2;
         setNumSlide(numberSlide);
@@ -36,7 +37,7 @@ return (
          <H2> {item.serie_name}</H2> 
          <Paragraph> {item.serie_description} </Paragraph> 
      </WraperInfo> 
-     <Download href={`${item.chapters[2].chapter_video.url}`} >  
+     <Download href={data[2].support_files[0].url} target='_blanck' >  
          {/* <TextFile> {item.textFile} </TextFile>  */}
          <Img src='/image/download.svg' /> 
      </Download> 

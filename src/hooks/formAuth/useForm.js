@@ -8,12 +8,12 @@ export const useForm = (initialForm,validationsForm,login) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('hanledSubmit',form);
+        //console.log('hanledSubmit',form);
         login(form);
     };
     
     const handleChange = (e) => {
-        console.log('handlechange',form)
+        //console.log('handlechange',form)
         const { name,value } = e.target;
         setForm({
             ...form,

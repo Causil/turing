@@ -12,7 +12,7 @@ import {
 import navbars from '../../data/navbar';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 //import useWindowDimensions from '../../hooks/useWindowDimensions';
-const Navbar = ({navbutton}) => {
+const Navbar = ({navbutton,navContent}) => {
 //const {mobile} = useWindowDimensions();
 const {navbarColor} = useWindowDimensions();
 return (

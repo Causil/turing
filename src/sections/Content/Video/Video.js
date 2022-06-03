@@ -19,7 +19,6 @@ const Video = ({setNavbutton}) =>  {
                 mozallowfullscreen 
                 allowfullscreen
             > 
-            
             Navegador No carga
             </Vi>
         </Suspense>
