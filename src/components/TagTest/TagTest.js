@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import {
     Container,
     Img,
@@ -7,7 +8,7 @@ import {
     Paragraph,
     Button
 } from './TagTestElements';
-
+import { useNavigate } from 'react-router-dom';
 import { AiOutlineRight } from "react-icons/ai";
 
 const TagTest = ({serie,i}) => {
@@ -16,6 +17,13 @@ const TagTest = ({serie,i}) => {
 //    'name',serie.quiz.questions.length
 //    )
 //console.log('serie',i,serie)
+//const [id,setId] = useState(null);
+const navigate = useNavigate();
+const handledClick = () => {
+      navigate('/scenery');
+      //setId(serie.id);
+      localStorage.setItem("id",JSON.stringify(serie.id));
+}
 return(
     <Container>
         <Img src={serie.chapters[1].chapter_image.formats.small.url} alt='imagen del test'/>
@@ -25,7 +33,7 @@ return(
                 <Paragraph> 45 minutos </Paragraph>
                 <Paragraph> {serie.quiz.questions.length} preguntas </Paragraph>
             </WraperInfo>
-            <Button> Responder  <AiOutlineRight /> </Button>
+            <Button onClick={handledClick} > Responder<AiOutlineRight /> </Button>
         </WraperInfoButton>
     </Container>
 )

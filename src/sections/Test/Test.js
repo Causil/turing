@@ -12,15 +12,16 @@ const FormTest = lazy(()=> import('../../components/FormTest/FormTest'));
 const TagTest = lazy(()=> import('../../components/TagTest/TagTest'));
 const Test = ({setNavbutton}) => {
     //const { data } =useContext(VideoContext);
-    let data  = JSON.parse(localStorage.getItem("Data"))
-    setNavbutton(true)
+    let data  = JSON.parse(localStorage.getItem("Data"));
+    setNavbutton(true);
     return(
         <Suspense fallback={ <ScaleLoader /> }>
             <Container>
                 <H3>Pruebas</H3>
                 <Paragraph>Aquí podrás ver las pruebas disponibles de los cursos a los que estás inscrito.</Paragraph>
                 <ContainerTestCard>
-                {data.map( (serie,i) => {
+                {
+                data.map( (serie,i) => {
                     if (serie.id !== 4){
                         return(
                             <Suspense fallback={ <ScaleLoader /> }>

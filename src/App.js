@@ -8,26 +8,24 @@ import Content from './sections/Content/Content';
 import Video from './sections/Content/Video/Video';
 import { VideoContextProvider } from './contexts/video/VideoContext'
 import Test from './sections/Test/Test';
+import TestForm from './sections/Test/Escenario/TestForm';
 function App() {
-  const [navbutton,setNavbutton] = useState(false);
+  const [navbutton, setNavbutton] = useState(false);
   return (
-  <AuthContextProvider>
-  <VideoContextProvider>
+  <AuthContextProvider  >
+  <VideoContextProvider >
     <Wraper navbutton={navbutton} >
       <Routes>
-        <Route index element = { <Login setNavbutton={setNavbutton} />    }/>
-        <Route path="register" element = { <Register setNavbutton={setNavbutton} /> }/>
-        <Route path="content" element = { <Content  setNavbutton={setNavbutton}/> }/>
-        <Route path="video" element = { <Video  setNavbutton={setNavbutton}/> }/>
-        <Route path='test'  element={ <Test   setNavbutton={setNavbutton} /> } />
+        <Route index           element = { <Login     setNavbutton={setNavbutton} /> }   />
+        <Route path="register" element = { <Register  setNavbutton={setNavbutton} /> }   />
+        <Route path="content"  element = { <Content   setNavbutton={setNavbutton} /> }   />
+        <Route path="video"    element = { <Video     setNavbutton={setNavbutton} /> }   />
+        <Route path='test'     element = { <Test      setNavbutton={setNavbutton} /> }   />
+        <Route path='scenery'  element = { <TestForm  setNavbutton={setNavbutton} /> }   />
       </Routes>
     </Wraper>
   </VideoContextProvider>
-  </AuthContextProvider>
+  </AuthContextProvider >
   );
 }
-
 export default App;
-
-
-

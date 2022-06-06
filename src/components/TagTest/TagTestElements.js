@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { HashLink as Link } from 'react-router-hash-link';
 
 export const Container = styled.div`
     width: 100%;
@@ -78,4 +78,5 @@ export const Button = styled.button`
     outline:           none;
     border:             none;
     cursor:            pointer;
+    text-decoration:   none;
 `;
