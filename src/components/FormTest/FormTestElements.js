@@ -23,6 +23,7 @@ export const WraperTitleTime = styled.div`
   height:          20vh;
   display:         flex;
   justify-content: space-evenly;
+  position:        sticky;
 `;
 
 export const H3 = styled.h3`
@@ -103,18 +104,18 @@ export const WraperTest = styled.div`
   flex-direction:  column;
   justify-content: center;
   gap:             2em;
-  //outline:          2px solid blue;
+  //outline:       2px solid blue;
 `;
 
 export const WraperTestTitle = styled.div`
   width:          100%;
-  height:         120px;
+  height:         auto;
   display:        flex;
   flex-direction: column;
-  background: #FFFFFF;
-  box-shadow: 0px 3px 15px 3px rgba(36, 22, 69, 0.1);
-  border-radius: 16px;
-  padding: 4%;
+  background:     #FFFFFF;
+  box-shadow:     0px 3px 15px 3px rgba(36, 22, 69, 0.1);
+  border-radius:  16px;
+  padding:        4%;
 `;
 
 export const Title = styled.h3`
