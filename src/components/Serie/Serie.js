@@ -12,7 +12,6 @@ import {Container,
         ImgSerie,
         WraperTextChapter,
         ButtonLink,
-        
     } from './SerieElements';
 import Carousel from 'styled-components-carousel';
 import VideoContext from '../../contexts/video/VideoContext';
@@ -28,7 +27,6 @@ const Serie = ({item,i}) => {
     }
     ,[mobile]);
     const {setUrl} = useContext(VideoContext);
-    
     //console.log('iteracion' ,i,item.id,item.serie_name,item.serie_description,item.chapters[2].chapter_video.url)
 return (
 <Container> 
@@ -55,10 +53,10 @@ return (
      <ContainerSerie key={`serie${i}`} >    
         <ImgSerie src={serie.chapter_image.url} alt={item.chapters[2].chapter_image.name} />
         <WraperTextChapter>
-            <H2> {serie.chapter_name} </H2>  
+            <H2> {serie.chapter_name} </H2>
             <ButtonLink
                 to={'/video'}
-                onClick={() => setUrl(serie.chapter_video.url) }
+                onClick={() => {setUrl(serie.chapter_video.url); alert('Hola mundo')} }
             > Seguir viendo
             
             </ButtonLink>  
@@ -73,5 +71,3 @@ return (
 
 }
 export default Serie 
-
-//serie.chapter_video.url

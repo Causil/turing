@@ -23,7 +23,6 @@ export const WraperTitleTime = styled.div`
   height:          20vh;
   display:         flex;
   justify-content: space-evenly;
-  position:        sticky;
 `;
 
 export const H3 = styled.h3`
@@ -45,9 +44,11 @@ export const WraperTime = styled.div`
   width:           238px;
   height:          163px;
   left:            1066px;
-  top:             159px;
   background:      #FFFFFF;
   box-shadow:      0px 8px 15px rgba(27, 14, 56, 0.25);
+  position:        fixed;
+  top:             105px;
+  z-index:         999;
   //outline:       2px solid blue;
 
 `;
@@ -137,21 +138,22 @@ export const Enuciate = styled.p`
 export const WraperAnswers = styled.div`
   width:          100%;
   display:        flex;
-  align-items: center;
+  align-items:    center;
   background:     #FFFFFF;
   box-shadow:     0px 3px 15px 3px rgba(36, 22, 69, 0.1);
   border-radius:  16px;
-  padding:        3%;
+  padding:        1rem;
+  gap:            1rem;
   //outline:      2px solid blue;
 `;
 
 export const Check = styled.input`
-  width:          10%;
-  display:        flex;
-  flex-direction: column;
-  border-radius:  50%;
-  cursor:         pointer;
-  //outline:      2px solid blue;
+  //width:          10%;
+  //display:        flex;
+  //flex-direction: column;
+  //border-radius:  50%;
+  cursor:           pointer;
+  //outline:        2px solid blue;
 `;
 
 export const AnswerEnuciate = styled.p`

@@ -11,7 +11,7 @@ background: ${({ mobile, navbarColor, bg }) =>
 font-family:     'Roboto' sans-serif;
 font-weight:     300;
 width:           100%;
-height:          15vh;
+height:          80px;
 display:         flex;
 justify-content: center;
 align-items:     center;

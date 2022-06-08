@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import {
     Container,
     WraperTitleTimeTest,
@@ -22,12 +22,24 @@ import { useNavigate } from 'react-router-dom';
 const FormTest = () => {
     const  navigate = useNavigate();
     const  handledSubmit = () => {
-        navigate('/test')
+           navigate('/test')
     }
+    const [info, setInfo] = useState([]);
+      const handleChange = (e) => {
+        setInfo([
+          ...info,{
+          'answer':  e.target.value,
+          'question':e.target.name,
+          }
+          //[e.target.name]: e.target.value || e.target.checked
+        ]);
+        console.log('info',info)
+      };
+
+
     let id   = parseInt(localStorage.getItem("id"));
-    console.log('id',id)
     let data = JSON.parse(localStorage.getItem("Data"));
-    console.log(data[0].quiz,data[0].quiz.quiz_name,data[0].quiz.questions)
+    data.forEach((serie) => serie.quiz.questions.forEach((question) => question.incorrect_answers.push(question.correct_answer) ));
     return(
         <Container>
             <WraperTitleTimeTest  onSubmit={handledSubmit}>
@@ -54,17 +66,15 @@ const FormTest = () => {
                         <Title>  </Title>
                         <Enuciate> {question.question_description} </Enuciate>
                     </WraperTestTitle>
-                    { question.incorrect_answers.map( (answer,z) => 
-                    <WraperAnswers key={`answer${z}`}>
-                         <Check type='checkbox' />
-                         <AnswerEnuciate> {answer.answer_description} </AnswerEnuciate>
-                    </WraperAnswers>
+                    {   
+                        question.incorrect_answers.map( (answer,z) => {
+                        <WraperAnswers key={`answer${z}`}>
+                             <Check type='radio' name={`${question.id}`} value={`${answer.id}`} />
+                             <AnswerEnuciate> {answer.answer_description} </AnswerEnuciate>
+                        </WraperAnswers>
+                        }
                     )
                     }
-                     <WraperAnswers >
-                         <Check type='checkbox' />
-                         <AnswerEnuciate> {question.correct_answer.answer_description} </AnswerEnuciate>
-                    </WraperAnswers>
                     </>
                 )}
                 </WraperTest>
@@ -80,3 +90,9 @@ const FormTest = () => {
 }
 
 export default FormTest;
+
+
+{/* <WraperAnswers > */}
+    {/* <Check type='checkbox'  name={`${question.id}`} value={`${question[j].correct_answer.id}`}/> */}
+    {/* <AnswerEnuciate> {question.correct_answer.answer_description} </AnswerEnuciate> */}
+{/* </WraperAnswers> */}

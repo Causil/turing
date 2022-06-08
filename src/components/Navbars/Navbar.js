@@ -19,7 +19,9 @@ return (
     <Nav  navbarColor={navbarColor}> 
         <NavbarContainer>
             <NavLogo>
-                <Logo src='/image/logoNavbar.svg'/>
+                <Logo style={{padding:"0  0 0 4%"}} src='/image/logo_eafit_navbar.png' />
+                <hr style={{with:"2",size:"500", height: "40%"}}></hr>
+                <Logo style={{padding:"0  0 0 4%"}} src='/image/logoNavbar.svg'/>
             </NavLogo>
             {navbutton && (
             <NavMenu >   
